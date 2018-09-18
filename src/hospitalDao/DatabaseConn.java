@@ -57,6 +57,8 @@ public class DatabaseConn implements InterfaceDao{
 		//PID as per email
 		
 		PreparedStatement getPatientQuery = con.prepareStatement("Select pid from patient where email=?");
+		System.out.println("karan");
+		
 		getPatientQuery.setString(1, email);
 		
 		ResultSet emailResultSet = getPatientQuery.executeQuery();
